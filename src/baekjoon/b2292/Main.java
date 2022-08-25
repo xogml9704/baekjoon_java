@@ -7,11 +7,11 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int a = Integer.parseInt(sc.nextLine());
-		int b = 1;
+		int a = Integer.parseInt(sc.nextLine()); // 받아 들이는 값
+		int b = 1; // 초기 위치 값
 		for(int i = 0; true;) {
 			b = b + (6*i);
-			i++;
+			i++; 
 			if(b>=a) {
 				System.out.println(i);
 			break;
