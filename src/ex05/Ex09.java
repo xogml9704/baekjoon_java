@@ -27,7 +27,7 @@ public class Ex09 {
 			
 			} else if(a.equals("2")) {
 				
-				for(int i=0; i<studentArray.length; i++) {
+				for(int i=0; i<student; i++) {
 					System.out.printf("scores[%d] : ", i);
 					studentArray[i] = Integer.parseInt(sc.nextLine());
 					}
