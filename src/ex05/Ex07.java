@@ -10,7 +10,7 @@ public class Ex07 {
 				max = array[i];
 			}
 		}
-		System.out.println(max);
+		System.out.println(max);;
 	}
 
 }
