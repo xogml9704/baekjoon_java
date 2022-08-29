@@ -10,7 +10,6 @@ public class Code {
 		String b[] = a.split(",");
 		int c[] = new int[3];
 		String zero = null;
-		int count = 0;
 		int arr[] = new int[10];
 		
 		for(int i=0;i<b.length;i++) {
