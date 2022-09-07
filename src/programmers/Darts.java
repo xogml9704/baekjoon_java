@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Darts {
 	public static void main(String[] args) {
-		int[] numbers = {2, 1, 3, 4, 1};
+		int[] numbers = {0, 0, 100, 100};
 		
 		int numbers_length = 0;
 		
@@ -27,12 +27,19 @@ public class Darts {
 		int count = 0;
 		
 		for(int i=0; i<result.length; i++) {
+			if(result[i] == 0) {
+				count++;
+			}
+		}
+		
+		for(int i=0; i<result.length; i++) {
 			for(int j=i+1; j<result.length; j++) {
 				if(result[i] == result[j] && result[i] != 0) {
 					count++;
 					result[j] = 0;
 				}
 			}
+			System.out.println(result[i]+" ,"+count);
 		}
 		int sum = result.length - count;
 		int[] arr = new int[sum];
@@ -46,7 +53,7 @@ public class Darts {
 		}
 		
 		for(int i=0; i<arr.length; i++) {
-			System.out.print(arr[i]+" ,");
+			System.out.print(arr[i]);
 		}
 		
 	}
