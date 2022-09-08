@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Darts {
 	public static void main(String[] args) {
-		int[] numbers = {0, 0, 100, 100};
+		int[] numbers = {2, 1, 3, 4, 1};
 		
 		int numbers_length = 0;
 		
@@ -24,37 +24,40 @@ public class Darts {
 		
 		Arrays.sort(result);
 		
+		boolean[] boo = new boolean[result.length];
 		int count = 0;
 		
+		
 		for(int i=0; i<result.length; i++) {
-			if(result[i] == 0) {
+			for(int j=i+1; j<result.length; j++) {
+				if(result[i] == result[j]) {
+					boo[j] = true;
+				}
+			}
+			if(boo[i] == true) {
 				count++;
 			}
 		}
 		
-		for(int i=0; i<result.length; i++) {
-			for(int j=i+1; j<result.length; j++) {
-				if(result[i] == result[j] && result[i] != 0) {
-					count++;
-					result[j] = 0;
-				}
-			}
-			System.out.println(result[i]+" ,"+count);
-		}
-		int sum = result.length - count;
-		int[] arr = new int[sum];
+		int[] arr = new int[result.length-count];
+		int number = 0;
 		
-		int arr_result =0;
-		for(int i=0; i<result.length; i++) {
-			if(result[i] != 0) {
-				arr[arr_result] = result[i];
-				arr_result++;
+		for(int i=0; i<boo.length; i++) {
+			if(boo[i] == false) {
+				arr[number] = result[i];
+				number++;
 			}
 		}
 		
 		for(int i=0; i<arr.length; i++) {
-			System.out.print(arr[i]);
+			System.out.println(arr[i]);
 		}
+		
+		/*
+		for(int i=0; i<result.length; i++) {
+			System.out.print(result[i]);
+		}
+		*/
 		
 	}
 }
