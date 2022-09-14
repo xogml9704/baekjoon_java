@@ -16,7 +16,7 @@ public class Main {
 			}
 		}
 		if(num != 1) {
-			num = -1;
+			count = -1;
 		}
 		System.out.println(count);
 	}
