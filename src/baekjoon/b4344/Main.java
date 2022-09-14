@@ -21,6 +21,5 @@ public class Main {
 			}
 			finish = finish / arr2[0];
 		}
-		System.out.println(finish);
 	}
 }
