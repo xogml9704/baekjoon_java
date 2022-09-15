@@ -9,26 +9,24 @@ public class Main {
 		int a = Integer.parseInt(sc.nextLine());
 		
 		for(int i=0; i<a; i++) {
-			int count = 0;
-			double result = 0;
-			long finish = 0;
 			String[] arr = sc.nextLine().split(" ");
-			long[] arr2 = new long[arr.length];
+			int[] arr2 = new int[arr.length];
 			for(int j=0; j<arr.length; j++) {
 				arr2[j] = Integer.parseInt(arr[j]);
 			}
+			int sum = 0;
 			for(int j=1; j<arr2.length; j++) {
-				finish += (long) arr2[j];
+				sum += arr2[j];
 			}
-			finish = finish / arr2[0];
+			sum = sum / arr2[0];
+			int count = 0;
 			for(int j=1; j<arr2.length; j++) {
-				if(arr2[j] > finish) {
+				if(arr2[j] > sum) {
 					count++;
 				}
 			}
-			result = (double) count*100 / arr2[0];
-			result = Math.round(result * 1000) / 1000;
-			System.out.println(result+"%");
+			double result = (double) count / arr2[0];
+			System.out.println(String.format("%.3f", result * 100)+"%");
 		}
 	}
 }
