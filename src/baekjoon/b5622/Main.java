@@ -6,11 +6,27 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int finish = 0;
-		String[] arr = sc.nextLine().split("");
-		
-		for(int i=0; i<arr.length; i++) {
-			int count = 2;
-			
+		String dial = sc.nextLine();
+		char[] arr = new char[dial.length()];
+		for(int i=0; i<dial.length(); i++) {
+			arr[i] = dial.charAt(i);
 		}
+		int sum = 0;
+		for(int i=0; i<arr.length; i++) {
+			int count = 0;
+			for(char j='A'; j<='Z'; j++) {
+				if(arr[i] == j && arr[i] < 'W') {
+					int a  = j - 'A';
+					count = (a / 3) + 3;
+					break;
+				} else if (arr[i] == j && arr[i] >= 'W') {
+					count = 10;
+					break;
+				}
+			}
+			sum += count;
+			System.out.println(count);
+ 		}
+		System.out.println(sum);
 	}
 }
