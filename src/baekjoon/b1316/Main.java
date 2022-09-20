@@ -7,12 +7,14 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int a = Integer.parseInt(sc.nextLine());
+		String[] arr = 
 		
 		for(int i=0; i<a; i++) {
-			String[] arr = sc.nextLine().split("");
-			for(int j=0; j<arr.length; j++) {
-				
-			}
+			
+		}
+		
+		for(int i=0; i<arr.length; i++) {
+			
 		}
 	}
 }
