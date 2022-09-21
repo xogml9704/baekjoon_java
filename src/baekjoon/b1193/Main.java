@@ -11,9 +11,18 @@ public class Main {
 		int cross = 1;
 		int sum = 0;
 		
-		while (true) {
-			if(cross % 2 == 1) {
-				
+		while(true) {
+			if(a <= sum + cross) {
+				if (cross % 2 == 1) {
+					System.out.println((cross - (a - sum -1)) + "/" + (a - sum));
+					break;
+				} else {
+					System.out.println((a - sum) + "/" + (cross - (a - sum -1)));
+					break;
+				}
+			} else {
+				sum += cross;
+				cross++;
 			}
 		}
 	}
