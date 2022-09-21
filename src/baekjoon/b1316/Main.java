@@ -9,12 +9,6 @@ public class Main {
 		int a = Integer.parseInt(sc.nextLine());
 		String[] arr = new String[a];
 		
-		for(int i=0; i<a; i++) {
-			
-		}
 		
-		for(int i=0; i<arr.length; i++) {
-			
-		}
 	}
 }
