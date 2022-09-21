@@ -7,8 +7,15 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int a = Integer.parseInt(sc.nextLine());
-		String[] arr = new String[a];
 		
-		
+		for(int i=0; i<a; i++) {
+			String word = sc.nextLine();
+			char[] arr = new char[word.length()];
+			for(int j=0; j<word.length(); j++) {
+				arr[j] = word.charAt(j);
+			}
+			
+			
+		}
 	}
 }
