@@ -31,5 +31,7 @@ public class Stairs {
 		} 
 		System.out.println("길용이가 소모하는 칼로리를 단위를 생략한 채 정수만 출력");
 		System.out.println(total);
+		System.out.println("길용이가 소모하는 칼로리를 단위를 생략한 채 정수만 출력");
+		System.out.println(total);
 	}
 }
